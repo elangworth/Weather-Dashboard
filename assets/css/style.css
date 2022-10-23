@@ -73,7 +73,9 @@ footer {
     color: #ffffff;
 }
 
-
+.hide {
+    display: none;
+}
 
 
 

@@ -1,6 +1,9 @@
 const searchButton = document.getElementById('search-btn');
 const citiesSearchedUl = document.getElementById('cities-searched-list');
 const cityInputField = document.getElementById('city');
+const citiesContainer = document.getElementById('cities-container');
+const weatherCurrentCityContainer = document.getElementById('weather-current-city-container');
+const fiveDayForcastContainer = document.getElementById('five-day-forcast-container');
 
 //creates list elements and puts the newest one at the top
 function updateCities() {
@@ -13,6 +16,9 @@ function updateCities() {
       li.textContent = name;
       citiesSearchedUl.appendChild(li); 
       citiesSearchedUl.insertBefore(li,citiesSearchedUl.children[0]);
+      citiesContainer.classList.remove('hide');
+      weatherCurrentCityContainer.classList.remove('hide');
+      fiveDayForcastContainer.classlist.remove('hide');
     })
   }
 }
