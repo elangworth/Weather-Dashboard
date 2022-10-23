@@ -102,7 +102,7 @@ const day5WeatherImage = document.getElementById('day-5-weather-image');
  
 //performs searches on the apis to get lat and lon and then the weather for the city and then the 5 day forecast
 function performSearches(search) {
-  const baseURL = "http://api.openweathermap.org/geo/1.0/direct?"
+  const baseURL = "https://api.openweathermap.org/geo/1.0/direct?"
   let parameters = "limit=1&appid=203481f675fae76832d631c5ecaa6b09&q=" + encodeURIComponent(cityName);
   const fullURL = baseURL + parameters;
   let lat;
@@ -124,7 +124,7 @@ function performSearches(search) {
       return response.json();
     })
     .then (function (data){
-      cityWeatherImg.src="http://openweathermap.org/img/wn/" + data.weather[0].icon + '.png';
+      cityWeatherImg.src="https://openweathermap.org/img/wn/" + data.weather[0].icon + '.png';
       cityWeatherImg.alt = data.weather[0].description;
       temperature.innerHTML = 'Temperature: ' + data.main.temp + " F";
       wind.innerHTML = 'Wind: ' + data.wind.speed + " MPH";
@@ -138,31 +138,31 @@ function performSearches(search) {
     })
     .then(function(data) {
       tomorrowForcastDate.innerHTML = luxon.DateTime.now().plus({ days: 1 }).setZone('America/Los_Angeles').toLocaleString();
-      day1WeatherImage.src="http://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + '.png';
+      day1WeatherImage.src="https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + '.png';
       day1WeatherImage.alt = data.list[0].weather[0].description;
       tomorrowTemperature.innerHTML =  'Temperature: ' + data.list[0].main.temp + " F";
       tomorowWind.innerHTML = 'Wind: ' + data.list[0].wind.speed + " MPH";
       tomorrowHumidity.innerHTML = 'Humidity: ' + data.list[0].main.humidity + " %";
       day2ForcastDate.innerHTML = luxon.DateTime.now().plus({ days: 2 }).setZone('America/Los_Angeles').toLocaleString();
-      day2WeatherImage.src="http://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + '.png';
+      day2WeatherImage.src="https://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + '.png';
       day2WeatherImage.alt = data.list[0].weather[0].description;
       day2Temperature.innerHTML = 'Temperature: ' + data.list[1].main.temp + " F";
       day2Wind.innerHTML = 'Wind: ' + data.list[1].wind.speed + " MPH";
       day2Humidity.innerHTML = 'Humidity: ' + data.list[1].main.humidity + " %";
       day3ForcastDate.innerHTML = luxon.DateTime.now().plus({ days: 3 }).setZone('America/Los_Angeles').toLocaleString();
-      day3WeatherImage.src="http://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + '.png';
+      day3WeatherImage.src="https://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + '.png';
       day3WeatherImage.alt = data.list[0].weather[0].description;
       day3Temperature.innerHTML = 'Temperature: ' + data.list[2].main.temp + " F";
       day3Wind.innerHTML = 'Wind: ' + data.list[2].wind.speed + " MPH";
       day3Humidity.innerHTML = 'Humidity: ' + data.list[2].main.humidity + " %";
       day4ForcastDate.innerHTML = luxon.DateTime.now().plus({ days: 4 }).setZone('America/Los_Angeles').toLocaleString();
-      day4WeatherImage.src="http://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + '.png';
+      day4WeatherImage.src="https://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + '.png';
       day4WeatherImage.alt = data.list[0].weather[0].description;
       day4Temperature.innerHTML = 'Temperature: ' + data.list[3].main.temp + " F";
       day4Wind.innerHTML = 'Wind: ' + data.list[3].wind.speed + " MPH";
       day4Humidity.innerHTML = 'Humidity: ' + data.list[3].main.humidity + " %";
       day5ForcastDate.innerHTML = luxon.DateTime.now().plus({ days: 5 }).setZone('America/Los_Angeles').toLocaleString();
-      day5WeatherImage.src="http://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + '.png';
+      day5WeatherImage.src="https://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + '.png';
       day5WeatherImage.alt = data.list[0].weather[0].description;
       day5Temperature.innerHTML = 'Temperature: ' + data.list[4].main.temp + " F";
       day5Wind.innerHTML = 'Wind: ' + data.list[4].wind.speed + " MPH";
