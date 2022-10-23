@@ -18,7 +18,7 @@ function updateCities() {
       citiesSearchedUl.insertBefore(li,citiesSearchedUl.children[0]);
       citiesContainer.classList.remove('hide');
       weatherCurrentCityContainer.classList.remove('hide');
-      fiveDayForcastContainer.classlist.remove('hide');
+      fiveDayForcastContainer.classList.remove('hide');
     })
   }
 }
