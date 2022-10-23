@@ -1,8 +1,10 @@
 # Weather-Dashboard
 
 #Description
+In this project, I used three api's from Open Weather to create my weather dashboard. First I needed an API to fetch me the lat and lon of cities that are being searched. I then got the current weather for that city and then it's 5 day forecast too. The cities that are searched are added to an unordered list and the most recent city searched is at the top of the list. The cities are saved in local storage and if clicked on you will see their current weather and 5 day forecast too. I used bootstrap to help style the page. 
 
 #Live Link
+https://elangworth.github.io/Weather-Dashboard/
 
 #User Story
 AS A traveler
