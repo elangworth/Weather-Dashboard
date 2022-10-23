@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d5beec;
+}
+
+#header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(115,37,190,1) 35%, rgba(115,37,190,1) 100%);
+}
+
+#header-title {
+    color: #ffffff;
+}
+
+.card {
+    margin-left: 10px;
+}
+
+#cities-container {
+    background-color: #d5beec;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    border: solid black 1px;
+    margin: 4px;
+    padding: 2px;
+    text-align: center;
+    background-color: #7325be;
+    color: #ffffff;
+    width: auto;
+}
+
+.list li:hover {
+    background-color: #ab7cd8;
+    cursor: pointer;
+}
+
+footer {
+    margin-left: 10px;  
+    padding: 10px;  
+    text-align: center;
+}
+
+#weather-current-city-container {
+    background-color: #d5beec;
+}
+
+#test {
+    background-color: #d5beec;
+}
+
+#five-day-forcast-container {
+    background-color: #d5beec;
+}
+
+.days {
+    background-color: #7325be;
+    color:#ffffff;
+}
+
+#search-box {
+    background-color: #7325be;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* https://imagecolorpicker.com/color-code/7325be */
